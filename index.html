@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dino Runner Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-wrapper">
+    <header class="game-header">
+      <div class="title-wrap">
+        <span class="game-badge">CLASSIC ARCADE</span>
+        <h1>DINO RUNNER</h1>
+      </div>
+      <div class="scoreboard">
+        <div class="score-card">
+          <span class="score-label">HI SCORE</span>
+          <span id="high-score" class="score-val">00000</span>
+        </div>
+        <div class="score-card current">
+          <span class="score-label">SCORE</span>
+          <span id="score" class="score-val">00000</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="canvas-container">
+      <canvas id="gameCanvas" width="800" height="260"></canvas>
+      
+      <!-- Start / Game Over Overlay -->
+      <div id="overlay" class="overlay">
+        <div class="overlay-card">
+          <div id="overlay-icon" class="overlay-icon">🦖</div>
+          <h2 id="overlay-title">Ready to Run?</h2>
+          <p id="overlay-msg">Press <kbd>Space</kbd> or <kbd>↑</kbd> to jump</p>
+          <button id="action-btn" class="primary-btn" type="button">START GAME</button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="controls-hint">
+      <div class="hint-item"><kbd>Space</kbd> / <kbd>↑</kbd> or <kbd>Tap</kbd> to Jump</div>
+      <div class="hint-item"><kbd>↓</kbd> to Duck / Fall Faster</div>
+      <div class="hint-item"><kbd>P</kbd> to Pause</div>
+      <div class="hint-item"><kbd>M</kbd> Mute Sound</div>
+    </footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
